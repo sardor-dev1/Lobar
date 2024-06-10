@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./styles/output.css" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Lobar</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .container-fluit {
+            width: 85%;
+            margin: 0 auto;
+            max-width: 1440px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-zinc-800 text-white py-4 z-50 fixed w-full shadow-lg shadow-gray-300/50">
+        <div class="container-fluit mx-auto flex justify-between items-center">
+            <nav class="hidden lg:block">
+                <ul class="flex">
+                    <li><a href="#"
+                            class="px-4 h-full text-white py-2 duration-300 hover:bg-gray-500 hover:text-white">Zargarlar</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 h-full text-white py-2 duration-300 hover:bg-gray-500 hover:text-white">Dizaynerlar
+                            uchun</a>
+                    </li>
+                    <li><a href="#"
+                            class="px-4 h-full text-white py-2 duration-300 hover:bg-gray-500 hover:text-white">Bo'sh
+                            ish o'rinlari</a>
+                    </li>
+                </ul>
+            </nav>
+            <div style="margin-right: 100px;">
+                <a href="#" class="flex text-red items-center text-3xl" style="font-family: Marcellus SC;">
+                    Lobar
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="toggleBtn" class="block text-gray-200 focus:outline-none">
+                    <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path v-if="open" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 6h16v2H4V6zm16 5H4v2h16v-2zm0 5H4v2h16v-2z" />
+                        <path v-else fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex">
+                <button class="px-4 py-2 flex items-center gap-2 hover:bg-gray-500 duration-300"><img
+                        src="./assets/images/gridicons_search (1).svg" alt=""> <span>qidirmoq</span></button>
+                <button class="px-4 py-2 hover:bg-gray-500 duration-300">ro'yxatdan o'tish</button>
+            </div>
+        </div>
+        <div id="menu"
+            class="absolute w-full md:hidden bg-zinc-800 translate-x-[-100%] z-[-10] duration-200 pt-[30px] shadow-lg shadow-gray-300/50">
+            <ul class="flex container-fluit  flex-col items-center gap-3" x-show="open" @click.away="open = false">
+                <li class="w-full"><a href="#"
+                        class="block px-4 py-2 hover:bg-gray-500 duration-300 text-sm text-white border-b-[2px] border-transparent hover:border-gray-300">Zargarlar</a>
+                </li>
+                <li class="w-full"><a href="#"
+                        class="block px-4 py-2 hover:bg-gray-500 duration-300 text-sm text-white border-b-[2px] border-transparent hover:border-gray-300">Dizaynerlar</a>
+                </li>
+                <li class="w-full"><a href="#"
+                        class="block mb-1 px-4 py-2 hover:bg-gray-500 duration-300 text-sm text-white border-b-[2px] border-transparent hover:border-gray-300">Bo'sh
+                        ish o'rinlari</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="w-full bg-center object-none bg-no-repeat bg-[url('./assets/images/hero.png')]"
+        style="background-image: url(./assets/images/hero.png);">
+        <div class="container-fluit">
+            <h1
+                class="pt-[300px] sm:pt-[350px] md:pt-[500px] pb-[20px] sm:pb-[30px] md:pb-50px text-center font-bold text-[30px] sm:text-[32px] md:text-36px text-white">
+                Yorqin, Go'zal, Bejirim!</h1>
+            <div class="pb-[50px] w-full text-center bg-transparent">
+                <button
+                    class="border-2 hover:bg-gray-600 text-[14px] sm:text-[18px] font-medium md:px-4 md:py-2 duration-200 border-solid border-white text-white px-3 py-1">mahsulot
+                    katalogi</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluit">
+            <p class="text-[24px] font-normal text-center pt-[40px] md:pt-100px">Voqealar uchun</p>
+            <h2 class="text-24px sm:text-[28px] md:text-36px text-center pt-[20px] pb-[30px] md:pb-50px">Haqiqiy
+                go'zallik shu yerda!</h2>
+            <div>
+                <div class="ap-tab">
+                    <ul class="ap-tab-list flex flex-wrap gap-8 pb-[30px] sm:pb-[50px] items-center">
+
+                        <li class="ap-tab-item"><a
+                                class="px-3 py-1 text-[16px] sm:text-[18px] font-medium sm:px-8 sm:py-2 border-2 border-gray-400 bg-white duration-300 hover:bg-gray-600 focus:bg-black focus:text-white hover:text-white hover:border-transparent ap-tab-link"
+                                href="#">Erkaklarga</a></li>
+                        <li class="ap-tab-item"><a
+                                class="px-3 py-1 text-[16px] sm:text-[18px] font-medium sm:px-8 sm:py-2 border-2 border-gray-400 bg-white duration-300 hover:bg-gray-600 focus:bg-black focus:text-white hover:text-white hover:border-transparent ap-tab-link"
+                                href="#">Ayollar</a></li>
+                        <li class="ap-tab-item"><a
+                                class="px-3 py-1 text-[16px] sm:text-[18px] font-medium sm:px-8 sm:py-2 border-2 border-gray-400 bg-white duration-300 hover:bg-gray-600 focus:bg-black focus:text-white hover:text-white hover:border-transparent ap-tab-link"
+                                href="#">Juftliklar</a></li>
+
+                    </ul>
+                </div>
+                <div class="ap-tab-container">
+                    <div>
+                        <div class="ap-tab-content">
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-5">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/mens/img-1.jpg" alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/mens/tattooed-hands-of-a-young-man-wearing-all-black_t20_g8aQbY-840x560.webp"
+                                    alt="">
+                                <img class="rounded-xl w-[85%] md:w-[97%] mx-auto"
+                                    src="./assets/images/ap-tab/mens/7-Mistakes-Men-Make-Wearing-Jewelry3.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="ap-tab-content">
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-5">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/womans/gypsum-marble-decorative-stand-gold-decoration-background-silk-stand_125966-2343 (1).jpg"
+                                    alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/womans/gypsum-marble-decorative-stand-gold-decoration-background-silk-stand_125966-2478.avif"
+                                    alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/womans/Depositphotos_153074986_L.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="ap-tab-content">
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center gap-5">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/1.jpg" alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/1698224841798-c7533b1bad7a447480d6e8e579fea713-goods.webp"
+                                    alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/5aaf3c1547d3ae492b990908-large.webp" alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/images.jpg" alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/img.5.jpg" alt="">
+                                <img class="rounded-xl w-[85%] md:w-full mx-auto"
+                                    src="./assets/images/ap-tab/couples/images (6).jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluit">
+            <p class="text-center text-[18px] font-medium pt-[50px] sm:pt-[70px] md:pt-100px">Foydali maqolalar</p>
+            <h2 class="text-[28px] sm:text-[32px] md:text-[36px] text-center pb-[20px] sm:pb-[40px]">Qimmatbaho
+                sovg'alarni tanlash bo'yicha eng yaxshi maslahatlar
+            </h2>
+            <div
+                class="grid mb-[35px] sm:mb-[50px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between items-center gap-8">
+                <img class="max-sm:w-[85%] mx-auto rounded-xl" src="./assets/images/gifts/img1.jpg" alt="">
+                <img class="max-sm:w-[85%] mx-auto rounded-xl" src="./assets/images/gifts/img2.avif" alt="">
+                <img class="max-sm:w-[85%] mx-auto rounded-xl" src="./assets/images/gifts/img4.webp" alt="">
+            </div>
+            <div class="w-full text-center">
+                <button
+                    class="text-[14px] sm:text-[18px] mb-[50px] md:mb-[100px] bg-gray-400 duration-600 hover:bg-gray-300 text-gray-900 px-[20px] py-[12px] sm:px-[35px] sm:py-[15px]">Maslahatlar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluit ">
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 mx-auto md:w-[70%] lg:w-[60%]">
+            <img class="w-full sm:col-span-2 md:col-span-2" src="./assets/images/cards/gallery__video--hover.png"
+                alt="">
+            <img class="w-full sm:col-span-1 md:col-span-1" src="./assets/images/cards/gallery__image.png" alt="">
+            <img class="w-full sm:col-span-1 md:col-span-1" src="./assets/images/cards/gallery__image (1).png" alt="">
+            <img class="w-full sm:col-span-1 md:col-span-1" src="./assets/images/cards/gallery__image (2).png" alt="">
+            <img class="w-full sm:col-span-1 md:col-span-1" src="./assets/images/cards/gallery__image (3).png" alt="">
+            <img class="w-full sm:col-span-2 md:col-span-2" src="./assets/images/cards/gallery__video.png" alt="">
+        </div>
+    </section>
+
+    <section class="mt-[50px] md:mt-[100px]" style="background-image: url(./assets/images/Rectangle\ 6.png);">
+        <div class="container-fluit">
+            <p class="text-white text-[18px] text-center pt-[50px] md:pt-[100px] pb-[15px]">Foydali maslahatlar va
+                shaxsiy takliflar</p>
+            <h3 class="text-center pb-[35px] md:pb-50px text-white text-[28px] md:text-32px">Eksklyuziv axborot
+                byulleteni</h3>
+            <div class="flex pb-[40px] md:flex-row gap-8 flex-col md:pb-100px items-center  justify-evenly">
+                <div>
+                    <div class="text-white flex items-center gap-2">
+                        <img src="./assets/images/subscribe__icon.svg" alt=""><span>Shaxsiy menejer</span>
+                    </div>
+                    <div class="text-white flex items-center gap-2">
+                        <img src="./assets/images/subscribe__icon.svg" alt=""><span>Shaxsiy menejer</span>
+                    </div>
+                    <div class="text-white flex items-center gap-2">
+                        <img src="./assets/images/subscribe__icon.svg" alt=""><span>Shaxsiy menejer</span>
+                    </div>
+                </div>
+                <div class="cursor-pointer">
+                    <div class="bg-gray-300 px-5 py-3">
+                        <input class="py-[12px] px-[8px] placeholder-shown:border-gray-500 ..."
+                            placeholder="email kiriting" />
+                        <button class="bg-black text-white px-[35px] py-[12px]">Yuborish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-[50px] lg:pt-[80px] ">
+        <div class="container-fluit pb-[35px] grid grid-cols-1 gap-[50px] sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <p class="text-[20px] sm:text-[25px] font-medium border-b-2 border-solid border-gray-400">Foydali
+                    havolalar</p>
+                <ul>
+                    <li>
+                        <a href="#">Yetqazish</a>
+                    </li>
+                    <li>
+                        <a href="#">to'lov</a>
+                    </li>
+                    <li>
+                        <a href="#">ulushlar</a>
+                    </li>
+                    <li>
+                        <a href="#">Maxfiylik siyosati</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-[20px] sm:text-[25px] font-medium border-b-2 border-solid border-gray-400">To'lov</p>
+                <p>Har bir buyum o'ziga xos dizayn va uslubga ega bo'lib, shaxsiy did va uslubni aks ettiradi.</p>
+                <div class="flex items-center gap-3">
+                    <img src="./assets/images/footer/Rectangle 13.svg" alt="">
+                    <img src="./assets/images/footer/Rectangle 14.svg" alt="">
+                </div>
+            </div>
+            <div>
+                <p class="text-[20px] sm:text-[25px] font-medium border-b-2 border-solid border-gray-400">Kontaktlar</p>
+                <ul class="flex flex-col items-start gap-3:">
+                    <li>
+                        <a class="flex items-center gap-2" href="#"><img
+                                src="./assets/images/footer/entypo_old-phone.svg" alt="">8 (812) 234-56-55</a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-2" href="#"><img
+                                src="./assets/images/footer/entypo_old-phone.svg" alt="">8 (812) 234-56-55</a>
+                    </li>
+                    <l>
+                        <a class="flex items-center gap-2" href="#"><img
+                                src="./assets/images/footer/entypo_old-phone.svg" alt="">8 (812) 234-56-55</a>
+                    </l>
+                </ul>
+            </div>
+            <div>
+                <p class="text-[20px] sm:text-[25px] font-medium border-b-2 border-solid border-gray-400">ijtimoiy
+                    tarmoqlar</p>
+                <p>Zargarlik buyumlari orasida uzuklar, sirg'alar, bilakuzuklar, marjonlar va broshlar kabi turlari
+                    mavjud</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.youtube.com/"><img src="./assets/images/footer/Vector (4).svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class=" border-t-2 border-gray-400 border-solid">
+            <div class="container-fluit  grid py-5 md:grid-cols-2 lg:grid-cols-4 justify-between items-center">
+                <p>(c) 2024 Nilufar zargarlik</p>
+                <p>Ommaviy taklif shartnomasi</p>
+                <p>Pudratchilarga</p>
+                <p>Websahifa Lobar tomonidan yaratilgan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
